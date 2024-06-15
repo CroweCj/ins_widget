@@ -1,0 +1,52 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "g++ - Build and debug active file",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceRoot}/build/INS_WIDGET_TEST",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [
+                {
+                    "name": "LD_LIBRARY_PATH",
+                    "value": "/opt/Qt-5.15.2/5.15.2/gcc_64/lib"
+                }           
+            ],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "Build",
+            "miDebuggerPath": "/usr/bin/gdb",
+            "postDebugTask": "closeTerminal",
+            "visualizerFile": "/home/insnex/.config/Code/User/workspaceStorage/d4f12da9364acc286e2c55ce22fff241/tonka3000.qtvsctools/qt.natvis.xml"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "closeTerminal",
+            "configurations": ["g++ - Build and debug active file"]
+        }
+    ],
+    "tasks":[
+        {
+            "label":"closeTerminal",
+            "type":"shell",
+            "command":"kill",
+            "args":["-int", "${command:workbench.action.terminal.kill}"],
+
+        }
+
+    ]
+}

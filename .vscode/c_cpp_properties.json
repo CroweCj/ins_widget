@@ -1,0 +1,31 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/opt/Qt-5.15.2/5.15.2/gcc_64/include",
+                "/opt/Qt-5.15.2/5.15.2/gcc_64/include/QtWidgets",
+                "/opt/Qt-5.15.2/5.15.2/gcc_64/include/QtCore",
+                "/opt/Qt-5.15.2/5.15.2/gcc_64/include/QtGui",
+                "/opt/Qt-5.15.2/5.15.2/gcc_64/include/QtNetwork",
+                "/opt/Qt-5.15.2/5.15.2/gcc_64/include/QtSerialPort",
+                "/opt/Qt-5.15.2/5.15.2/gcc_64/include/QtWebSockets",
+                "/usr/include/",
+                "/usr/include/jsoncpp",
+                //"/home/insnex/opencv4.8.0_install/include/opencv4/",
+                "/usr/local/include/opencv4/",
+                "${workspaceFolder}/",
+                "./build/INS_WIDGET_TEST_autogen/include"
+
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c17",
+            "cppStandard": "gnu++14",
+            "intelliSenseMode": "linux-gcc-arm64",
+            "configurationProvider": "ms-vscode.cmake-tools"
+        }
+    ],
+    "version": 4
+}
