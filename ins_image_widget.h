@@ -7,6 +7,7 @@
 
 class InsImageGraphicsItem;
 class InsImageGraphicsView;
+class CollapsibleWidget;
 
 class ImageViewWidget : public QWidget
 {
@@ -28,4 +29,5 @@ private:
 	InsImageGraphicsView* mpGraphicsView;
 	QGraphicsScene* mpGraphicsScene;
 	InsImageGraphicsItem* mpImageItem;
+	CollapsibleWidget* mpHistWidget;
 };

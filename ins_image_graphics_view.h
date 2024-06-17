@@ -14,6 +14,7 @@ public:
     explicit InsImageGraphicsView(QWidget *parent = nullptr);
     ~InsImageGraphicsView();
 
+    void centerOnItem(QGraphicsItem* item);
 protected:
     void wheelEvent(QWheelEvent *event) override;
 

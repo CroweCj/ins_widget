@@ -20,6 +20,7 @@ InsImageGraphicsItem::InsImageGraphicsItem()
 	mImageCentorPosY = 0;
 	this->setPos(mImageCentorPosX, mImageCentorPosY);
 	this->setScale(mScaleValue);
+	mMove = false;
 }
 
 InsImageGraphicsItem::~InsImageGraphicsItem()
@@ -86,7 +87,7 @@ void InsImageGraphicsItem::mousePressEvent(QGraphicsSceneMouseEvent* event)
 		mMoveStartPos = event->pos();
 	}else if(event->button() == Qt::RightButton){
 		resetItemPos();
-	}else if(event->button() == Qt::MidButton){
+	}else if(event->button() == Qt::MiddleButton){
 		//居中
 	}
 	QGraphicsItem::mousePressEvent(event);

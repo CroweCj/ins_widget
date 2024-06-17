@@ -7,7 +7,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     QImage image;
-    image.load("/home/insnex/10T/code/ins_widget/test_image/1.bmp");
+    image.load("E:/code/ins_widget/src_code/ins_widget/test_image/1.bmp");
 
     ui->widget->setImage(image);
 
