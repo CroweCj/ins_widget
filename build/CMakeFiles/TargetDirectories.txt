@@ -1,0 +1,4 @@
+/home/insnex/10T/code/ins_widget/build/CMakeFiles/rebuild_cache.dir
+/home/insnex/10T/code/ins_widget/build/CMakeFiles/edit_cache.dir
+/home/insnex/10T/code/ins_widget/build/CMakeFiles/INS_WIDGET_TEST.dir
+/home/insnex/10T/code/ins_widget/build/CMakeFiles/INS_WIDGET_TEST_autogen.dir

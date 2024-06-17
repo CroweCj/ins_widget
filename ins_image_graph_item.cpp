@@ -12,6 +12,8 @@
 InsImageGraphicsItem::InsImageGraphicsItem()
 {
 	this->setAcceptHoverEvents(true);
+	this->setFlag(QGraphicsItem::ItemIsSelectable);
+    this->setAcceptDrops(true);
 	mScaleValue = 1.0;
 	mScaleDefaultValue = 1.0;
 	mImageCentorPosX = 0;
@@ -79,18 +81,33 @@ void InsImageGraphicsItem::hoverMoveEvent(QGraphicsSceneHoverEvent* event)
 
 void InsImageGraphicsItem::mousePressEvent(QGraphicsSceneMouseEvent* event)
 {
-
+	if(event->button() == Qt::LeftButton){
+		mMove = true;
+		mMoveStartPos = event->pos();
+	}else if(event->button() == Qt::RightButton){
+		resetItemPos();
+	}else if(event->button() == Qt::MidButton){
+		//居中
+	}
 	QGraphicsItem::mousePressEvent(event);
 }
 
 
 void InsImageGraphicsItem::mouseMoveEvent(QGraphicsSceneMouseEvent* event)
 {
+	QPointF point = (event->pos() - mMoveStartPos) * mScaleValue;
+    if (mMove){
+        mImageCentorPosX += point.x();
+        mImageCentorPosY += point.y();
+        setPos(mImageCentorPosX, mImageCentorPosY);
+    }
+    
 	QGraphicsItem::mouseMoveEvent(event);
 }
 
 void InsImageGraphicsItem::mouseReleaseEvent(QGraphicsSceneMouseEvent* event)
 {
+	mMove = false;
 	QGraphicsItem::mouseReleaseEvent(event);
 }
 
@@ -115,4 +132,15 @@ void InsImageGraphicsItem::setItemPos(const QPointF&  _pos)
 {
 	QPointF scennePos = this->mapToScene(_pos);
 	this->setPos(scennePos);
+}
+
+void InsImageGraphicsItem::resetItemPos()
+{
+    mScaleValue = mScaleDefaultValue;
+
+    setScale(mScaleDefaultValue);
+    mImageCentorPosX = 0;
+    mImageCentorPosY = 0;
+
+    setPos(0, 0);
 }

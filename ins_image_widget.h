@@ -18,7 +18,7 @@ public:
 	void setImage(const QImage& _image);
 
 signals:
-
+	void sig_hover_pos_update(qreal _x, qreal _y, QRgb _color);
 public slots:
 
 protected:

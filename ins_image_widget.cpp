@@ -27,7 +27,7 @@ ImageViewWidget::ImageViewWidget(QWidget* _parent)
 	mpGraphicsView->centerOn((QGraphicsItem*)mpImageItem);
 	mpGraphicsView->show();
 
-
+	QObject::connect(mpImageItem, &InsImageGraphicsItem::sig_hover_pos_update, this, &ImageViewWidget::sig_hover_pos_update);
 }
 
 ImageViewWidget::~ImageViewWidget()

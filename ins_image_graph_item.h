@@ -20,7 +20,7 @@ protected:
 	void paint(QPainter* painter, const QStyleOptionGraphicsItem* option, QWidget* widget = nullptr) override;
 private:
 	void setItemPos(const QPointF&  _pos);
-
+	void resetItemPos();
 signals:
 	void sig_hover_pos_update(qreal _x, qreal _y, QRgb _color);
 private:
@@ -31,6 +31,8 @@ private:
 	QImage mImage;
 
 	bool mMove;
+	QPointF mMoveStartPos;
+	QPointF mMoveEndPos;
 
 };
 
