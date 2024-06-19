@@ -8,6 +8,16 @@
 	"HEADERS" : 
 	[
 		[
+			"/home/insnex/10T/code/ins_widget/collapsible_widget.h",
+			"MU",
+			"EWIEGA46WW/moc_collapsible_widget.cpp"
+		],
+		[
+			"/home/insnex/10T/code/ins_widget/histogram_widget.h",
+			"MU",
+			"EWIEGA46WW/moc_histogram_widget.cpp"
+		],
+		[
 			"/home/insnex/10T/code/ins_widget/ins_image_graph_item.h",
 			"MU",
 			"EWIEGA46WW/moc_ins_image_graph_item.cpp"
@@ -88,6 +98,8 @@
 	"SETTINGS_FILE" : "/home/insnex/10T/code/ins_widget/build/CMakeFiles/INS_WIDGET_TEST_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[ "/home/insnex/10T/code/ins_widget/collapsible_widget.cpp", "MU" ],
+		[ "/home/insnex/10T/code/ins_widget/histogram_widget.cpp", "MU" ],
 		[ "/home/insnex/10T/code/ins_widget/ins_image_graph_item.cpp", "MU" ],
 		[ "/home/insnex/10T/code/ins_widget/ins_image_graphics_view.cpp", "MU" ],
 		[ "/home/insnex/10T/code/ins_widget/ins_image_widget.cpp", "MU" ],

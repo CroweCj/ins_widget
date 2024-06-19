@@ -60,13 +60,18 @@ public:
 
         groupBox = new QGroupBox(centralwidget);
         groupBox->setObjectName(QString::fromUtf8("groupBox"));
-        gridLayout = new QGridLayout(groupBox);
-        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
-        label = new QLabel(groupBox);
-        label->setObjectName(QString::fromUtf8("label"));
-        QSizePolicy sizePolicy1(QSizePolicy::Minimum, QSizePolicy::Preferred);
+        QSizePolicy sizePolicy1(QSizePolicy::Fixed, QSizePolicy::Preferred);
         sizePolicy1.setHorizontalStretch(0);
         sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(groupBox->sizePolicy().hasHeightForWidth());
+        groupBox->setSizePolicy(sizePolicy1);
+        groupBox->setMinimumSize(QSize(500, 0));
+        groupBox->setMaximumSize(QSize(500, 16777215));
+        gridLayout = new QGridLayout(groupBox);
+        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
+        gridLayout->setContentsMargins(0, 0, 0, 0);
+        label = new QLabel(groupBox);
+        label->setObjectName(QString::fromUtf8("label"));
         sizePolicy1.setHeightForWidth(label->sizePolicy().hasHeightForWidth());
         label->setSizePolicy(sizePolicy1);
 
@@ -77,21 +82,25 @@ public:
         sizePolicy1.setHeightForWidth(label_2->sizePolicy().hasHeightForWidth());
         label_2->setSizePolicy(sizePolicy1);
 
-        gridLayout->addWidget(label_2, 1, 0, 1, 1);
+        gridLayout->addWidget(label_2, 2, 0, 1, 1);
 
         label_pos = new QLabel(groupBox);
         label_pos->setObjectName(QString::fromUtf8("label_pos"));
         sizePolicy1.setHeightForWidth(label_pos->sizePolicy().hasHeightForWidth());
         label_pos->setSizePolicy(sizePolicy1);
+        label_pos->setMinimumSize(QSize(400, 0));
+        label_pos->setMaximumSize(QSize(400, 16777215));
 
-        gridLayout->addWidget(label_pos, 0, 1, 1, 1);
+        gridLayout->addWidget(label_pos, 1, 0, 1, 1);
 
         label_pixel_val = new QLabel(groupBox);
         label_pixel_val->setObjectName(QString::fromUtf8("label_pixel_val"));
         sizePolicy1.setHeightForWidth(label_pixel_val->sizePolicy().hasHeightForWidth());
         label_pixel_val->setSizePolicy(sizePolicy1);
+        label_pixel_val->setMinimumSize(QSize(400, 0));
+        label_pixel_val->setMaximumSize(QSize(400, 16777215));
 
-        gridLayout->addWidget(label_pixel_val, 1, 1, 1, 1);
+        gridLayout->addWidget(label_pixel_val, 3, 0, 1, 1);
 
 
         gridLayout_2->addWidget(groupBox, 0, 1, 1, 1);

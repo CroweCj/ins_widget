@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/INS_WIDGET_TEST_autogen.dir/ParseCache.txt"
   "INS_WIDGET_TEST_autogen"
   "CMakeFiles/INS_WIDGET_TEST.dir/INS_WIDGET_TEST_autogen/mocs_compilation.cpp.o"
+  "CMakeFiles/INS_WIDGET_TEST.dir/collapsible_widget.cpp.o"
+  "CMakeFiles/INS_WIDGET_TEST.dir/histogram_widget.cpp.o"
   "CMakeFiles/INS_WIDGET_TEST.dir/ins_image_graph_item.cpp.o"
   "CMakeFiles/INS_WIDGET_TEST.dir/ins_image_graphics_view.cpp.o"
   "CMakeFiles/INS_WIDGET_TEST.dir/ins_image_widget.cpp.o"

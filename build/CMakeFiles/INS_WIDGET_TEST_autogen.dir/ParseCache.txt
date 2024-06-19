@@ -6,6 +6,7 @@
 /home/insnex/10T/code/ins_widget/mainwindow.h
  mmc:Q_OBJECT
 /home/insnex/10T/code/ins_widget/main.cpp
+/home/insnex/10T/code/ins_widget/collapsible_widget.cpp
 /home/insnex/10T/code/ins_widget/ins_image_widget.h
  mmc:Q_OBJECT
 /home/insnex/10T/code/ins_widget/ins_image_graph_item.cpp
@@ -13,3 +14,8 @@
 /home/insnex/10T/code/ins_widget/ins_image_widget.cpp
 /home/insnex/10T/code/ins_widget/mainwindow.cpp
  uic:ui_mainwindow.h
+/home/insnex/10T/code/ins_widget/collapsible_widget.h
+ mmc:Q_OBJECT
+/home/insnex/10T/code/ins_widget/histogram_widget.h
+ mmc:Q_OBJECT
+/home/insnex/10T/code/ins_widget/histogram_widget.cpp

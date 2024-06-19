@@ -98,7 +98,9 @@
         "qvboxlayout": "cpp",
         "qgraphicsscenehoverevent": "cpp",
         "qgraphicsscenewheelevent": "cpp",
-        "qgraphicsscene": "cpp"
+        "qgraphicsscene": "cpp",
+        "qgraphicsproxywidget": "cpp",
+        "qpushbutton": "cpp"
     },
     "cmake.configureOnOpen": false
 }

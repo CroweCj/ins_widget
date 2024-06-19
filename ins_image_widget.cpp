@@ -2,9 +2,11 @@
 #include "ins_image_graph_item.h"
 #include "ins_image_graphics_view.h"
 #include "collapsible_widget.h"
+#include "histogram_widget.h"
 
 #include <QVBoxLayout>
 #include <QGraphicsProxyWidget>
+QGraphicsProxyWidget* proxyWidget;
 
 ImageViewWidget::ImageViewWidget(QWidget* _parent) 
 	: QWidget(_parent)
@@ -13,16 +15,16 @@ ImageViewWidget::ImageViewWidget(QWidget* _parent)
 	, mpHistWidget(nullptr)
 {
 	QVBoxLayout *layout = new QVBoxLayout;
-	mpHistWidget = new CollapsibleWidget();
+	mpHistWidget = new HistogramCollapsibleWidget();
 	mpGraphicsScene = new QGraphicsScene(this);
 
 	mpGraphicsView = new InsImageGraphicsView(this);
 	mpImageItem = new InsImageGraphicsItem();
 	mpGraphicsScene->addItem((QGraphicsItem*)mpImageItem);
 
-	QGraphicsProxyWidget* proxyWidget = mpGraphicsScene->addWidget(mpHistWidget);
-	proxyWidget->setPos(0, 0);
-	proxyWidget->setZValue(1);  // È·±£¿Ø¼þÔÚ×îÉÏ²ã
+	proxyWidget = mpGraphicsScene->addWidget(mpHistWidget);
+	
+	proxyWidget->setZValue(1);  // È·ï¿½ï¿½ï¿½Ø¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï²ï¿½
 	proxyWidget->setFlag(QGraphicsItem::ItemIgnoresTransformations);
 
 	mpGraphicsView->setScene(mpGraphicsScene);
@@ -31,9 +33,14 @@ ImageViewWidget::ImageViewWidget(QWidget* _parent)
     mpGraphicsView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 	layout->addWidget(mpGraphicsView);
 	this->setLayout(layout);
+	int nwidth = mpGraphicsView->width() * 3;
+    int nheight = mpGraphicsView->height() * 3;
+    mpGraphicsView->setSceneRect(QRectF(-(nwidth / 2), -(nheight / 2), nwidth, nheight));
 
 	mpGraphicsView->centerOn((QGraphicsItem*)mpImageItem);
 	mpGraphicsView->show();
+
+	proxyWidget->setPos(mpGraphicsView->mapToScene(0, 0));
 
 	QObject::connect(mpImageItem, &InsImageGraphicsItem::sig_hover_pos_update, this, &ImageViewWidget::sig_hover_pos_update);
 }
@@ -59,7 +66,7 @@ void ImageViewWidget::paintEvent(QPaintEvent* _event)
 void ImageViewWidget::resizeEvent(QResizeEvent* _event)
 {
 	//TODO:
-
+	proxyWidget->setPos(mpGraphicsView->mapToScene(0, 0));
 	QWidget::resizeEvent(_event);
 	return;
 }

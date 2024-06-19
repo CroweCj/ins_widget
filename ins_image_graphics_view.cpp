@@ -10,8 +10,8 @@ InsImageGraphicsView::InsImageGraphicsView(QWidget *parent)
 {
     // 设置背景颜色
     setBackgroundBrush(Qt::white);
-    setTransformationAnchor(QGraphicsView::AnchorUnderMouse);
-    setResizeAnchor(QGraphicsView::AnchorUnderMouse);
+    //setTransformationAnchor(QGraphicsView::AnchorUnderMouse);
+    //setResizeAnchor(QGraphicsView::AnchorUnderMouse);
 }
 
 InsImageGraphicsView::~InsImageGraphicsView()
@@ -40,7 +40,5 @@ void InsImageGraphicsView::centerOnItem(QGraphicsItem* item)
 
 void InsImageGraphicsView::wheelEvent(QWheelEvent *event)
 {
-    //this->centerOn(event->pos());
-    this->centerOn(this->items().first());
     QGraphicsView::wheelEvent(event);
 }

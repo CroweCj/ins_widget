@@ -163,6 +163,60 @@ INS_WIDGET_TEST_autogen/mocs_compilation.cpp.s:
 	$(MAKE) -f CMakeFiles/INS_WIDGET_TEST.dir/build.make CMakeFiles/INS_WIDGET_TEST.dir/INS_WIDGET_TEST_autogen/mocs_compilation.cpp.s
 .PHONY : INS_WIDGET_TEST_autogen/mocs_compilation.cpp.s
 
+collapsible_widget.o: collapsible_widget.cpp.o
+
+.PHONY : collapsible_widget.o
+
+# target to build an object file
+collapsible_widget.cpp.o:
+	$(MAKE) -f CMakeFiles/INS_WIDGET_TEST.dir/build.make CMakeFiles/INS_WIDGET_TEST.dir/collapsible_widget.cpp.o
+.PHONY : collapsible_widget.cpp.o
+
+collapsible_widget.i: collapsible_widget.cpp.i
+
+.PHONY : collapsible_widget.i
+
+# target to preprocess a source file
+collapsible_widget.cpp.i:
+	$(MAKE) -f CMakeFiles/INS_WIDGET_TEST.dir/build.make CMakeFiles/INS_WIDGET_TEST.dir/collapsible_widget.cpp.i
+.PHONY : collapsible_widget.cpp.i
+
+collapsible_widget.s: collapsible_widget.cpp.s
+
+.PHONY : collapsible_widget.s
+
+# target to generate assembly for a file
+collapsible_widget.cpp.s:
+	$(MAKE) -f CMakeFiles/INS_WIDGET_TEST.dir/build.make CMakeFiles/INS_WIDGET_TEST.dir/collapsible_widget.cpp.s
+.PHONY : collapsible_widget.cpp.s
+
+histogram_widget.o: histogram_widget.cpp.o
+
+.PHONY : histogram_widget.o
+
+# target to build an object file
+histogram_widget.cpp.o:
+	$(MAKE) -f CMakeFiles/INS_WIDGET_TEST.dir/build.make CMakeFiles/INS_WIDGET_TEST.dir/histogram_widget.cpp.o
+.PHONY : histogram_widget.cpp.o
+
+histogram_widget.i: histogram_widget.cpp.i
+
+.PHONY : histogram_widget.i
+
+# target to preprocess a source file
+histogram_widget.cpp.i:
+	$(MAKE) -f CMakeFiles/INS_WIDGET_TEST.dir/build.make CMakeFiles/INS_WIDGET_TEST.dir/histogram_widget.cpp.i
+.PHONY : histogram_widget.cpp.i
+
+histogram_widget.s: histogram_widget.cpp.s
+
+.PHONY : histogram_widget.s
+
+# target to generate assembly for a file
+histogram_widget.cpp.s:
+	$(MAKE) -f CMakeFiles/INS_WIDGET_TEST.dir/build.make CMakeFiles/INS_WIDGET_TEST.dir/histogram_widget.cpp.s
+.PHONY : histogram_widget.cpp.s
+
 ins_image_graph_item.o: ins_image_graph_item.cpp.o
 
 .PHONY : ins_image_graph_item.o
@@ -311,6 +365,12 @@ help:
 	@echo "... INS_WIDGET_TEST_autogen/mocs_compilation.o"
 	@echo "... INS_WIDGET_TEST_autogen/mocs_compilation.i"
 	@echo "... INS_WIDGET_TEST_autogen/mocs_compilation.s"
+	@echo "... collapsible_widget.o"
+	@echo "... collapsible_widget.i"
+	@echo "... collapsible_widget.s"
+	@echo "... histogram_widget.o"
+	@echo "... histogram_widget.i"
+	@echo "... histogram_widget.s"
 	@echo "... ins_image_graph_item.o"
 	@echo "... ins_image_graph_item.i"
 	@echo "... ins_image_graph_item.s"

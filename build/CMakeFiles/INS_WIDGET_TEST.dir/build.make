@@ -70,9 +70,35 @@ CMakeFiles/INS_WIDGET_TEST.dir/INS_WIDGET_TEST_autogen/mocs_compilation.cpp.s: c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/INS_WIDGET_TEST.dir/INS_WIDGET_TEST_autogen/mocs_compilation.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/insnex/10T/code/ins_widget/build/INS_WIDGET_TEST_autogen/mocs_compilation.cpp -o CMakeFiles/INS_WIDGET_TEST.dir/INS_WIDGET_TEST_autogen/mocs_compilation.cpp.s
 
+CMakeFiles/INS_WIDGET_TEST.dir/collapsible_widget.cpp.o: CMakeFiles/INS_WIDGET_TEST.dir/flags.make
+CMakeFiles/INS_WIDGET_TEST.dir/collapsible_widget.cpp.o: ../collapsible_widget.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/insnex/10T/code/ins_widget/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/INS_WIDGET_TEST.dir/collapsible_widget.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/INS_WIDGET_TEST.dir/collapsible_widget.cpp.o -c /home/insnex/10T/code/ins_widget/collapsible_widget.cpp
+
+CMakeFiles/INS_WIDGET_TEST.dir/collapsible_widget.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/INS_WIDGET_TEST.dir/collapsible_widget.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/insnex/10T/code/ins_widget/collapsible_widget.cpp > CMakeFiles/INS_WIDGET_TEST.dir/collapsible_widget.cpp.i
+
+CMakeFiles/INS_WIDGET_TEST.dir/collapsible_widget.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/INS_WIDGET_TEST.dir/collapsible_widget.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/insnex/10T/code/ins_widget/collapsible_widget.cpp -o CMakeFiles/INS_WIDGET_TEST.dir/collapsible_widget.cpp.s
+
+CMakeFiles/INS_WIDGET_TEST.dir/histogram_widget.cpp.o: CMakeFiles/INS_WIDGET_TEST.dir/flags.make
+CMakeFiles/INS_WIDGET_TEST.dir/histogram_widget.cpp.o: ../histogram_widget.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/insnex/10T/code/ins_widget/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/INS_WIDGET_TEST.dir/histogram_widget.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/INS_WIDGET_TEST.dir/histogram_widget.cpp.o -c /home/insnex/10T/code/ins_widget/histogram_widget.cpp
+
+CMakeFiles/INS_WIDGET_TEST.dir/histogram_widget.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/INS_WIDGET_TEST.dir/histogram_widget.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/insnex/10T/code/ins_widget/histogram_widget.cpp > CMakeFiles/INS_WIDGET_TEST.dir/histogram_widget.cpp.i
+
+CMakeFiles/INS_WIDGET_TEST.dir/histogram_widget.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/INS_WIDGET_TEST.dir/histogram_widget.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/insnex/10T/code/ins_widget/histogram_widget.cpp -o CMakeFiles/INS_WIDGET_TEST.dir/histogram_widget.cpp.s
+
 CMakeFiles/INS_WIDGET_TEST.dir/ins_image_graph_item.cpp.o: CMakeFiles/INS_WIDGET_TEST.dir/flags.make
 CMakeFiles/INS_WIDGET_TEST.dir/ins_image_graph_item.cpp.o: ../ins_image_graph_item.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/insnex/10T/code/ins_widget/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/INS_WIDGET_TEST.dir/ins_image_graph_item.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/insnex/10T/code/ins_widget/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/INS_WIDGET_TEST.dir/ins_image_graph_item.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/INS_WIDGET_TEST.dir/ins_image_graph_item.cpp.o -c /home/insnex/10T/code/ins_widget/ins_image_graph_item.cpp
 
 CMakeFiles/INS_WIDGET_TEST.dir/ins_image_graph_item.cpp.i: cmake_force
@@ -85,7 +111,7 @@ CMakeFiles/INS_WIDGET_TEST.dir/ins_image_graph_item.cpp.s: cmake_force
 
 CMakeFiles/INS_WIDGET_TEST.dir/ins_image_graphics_view.cpp.o: CMakeFiles/INS_WIDGET_TEST.dir/flags.make
 CMakeFiles/INS_WIDGET_TEST.dir/ins_image_graphics_view.cpp.o: ../ins_image_graphics_view.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/insnex/10T/code/ins_widget/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/INS_WIDGET_TEST.dir/ins_image_graphics_view.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/insnex/10T/code/ins_widget/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/INS_WIDGET_TEST.dir/ins_image_graphics_view.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/INS_WIDGET_TEST.dir/ins_image_graphics_view.cpp.o -c /home/insnex/10T/code/ins_widget/ins_image_graphics_view.cpp
 
 CMakeFiles/INS_WIDGET_TEST.dir/ins_image_graphics_view.cpp.i: cmake_force
@@ -98,7 +124,7 @@ CMakeFiles/INS_WIDGET_TEST.dir/ins_image_graphics_view.cpp.s: cmake_force
 
 CMakeFiles/INS_WIDGET_TEST.dir/ins_image_widget.cpp.o: CMakeFiles/INS_WIDGET_TEST.dir/flags.make
 CMakeFiles/INS_WIDGET_TEST.dir/ins_image_widget.cpp.o: ../ins_image_widget.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/insnex/10T/code/ins_widget/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/INS_WIDGET_TEST.dir/ins_image_widget.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/insnex/10T/code/ins_widget/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/INS_WIDGET_TEST.dir/ins_image_widget.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/INS_WIDGET_TEST.dir/ins_image_widget.cpp.o -c /home/insnex/10T/code/ins_widget/ins_image_widget.cpp
 
 CMakeFiles/INS_WIDGET_TEST.dir/ins_image_widget.cpp.i: cmake_force
@@ -111,7 +137,7 @@ CMakeFiles/INS_WIDGET_TEST.dir/ins_image_widget.cpp.s: cmake_force
 
 CMakeFiles/INS_WIDGET_TEST.dir/main.cpp.o: CMakeFiles/INS_WIDGET_TEST.dir/flags.make
 CMakeFiles/INS_WIDGET_TEST.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/insnex/10T/code/ins_widget/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/INS_WIDGET_TEST.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/insnex/10T/code/ins_widget/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/INS_WIDGET_TEST.dir/main.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/INS_WIDGET_TEST.dir/main.cpp.o -c /home/insnex/10T/code/ins_widget/main.cpp
 
 CMakeFiles/INS_WIDGET_TEST.dir/main.cpp.i: cmake_force
@@ -124,7 +150,7 @@ CMakeFiles/INS_WIDGET_TEST.dir/main.cpp.s: cmake_force
 
 CMakeFiles/INS_WIDGET_TEST.dir/mainwindow.cpp.o: CMakeFiles/INS_WIDGET_TEST.dir/flags.make
 CMakeFiles/INS_WIDGET_TEST.dir/mainwindow.cpp.o: ../mainwindow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/insnex/10T/code/ins_widget/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/INS_WIDGET_TEST.dir/mainwindow.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/insnex/10T/code/ins_widget/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/INS_WIDGET_TEST.dir/mainwindow.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/INS_WIDGET_TEST.dir/mainwindow.cpp.o -c /home/insnex/10T/code/ins_widget/mainwindow.cpp
 
 CMakeFiles/INS_WIDGET_TEST.dir/mainwindow.cpp.i: cmake_force
@@ -138,6 +164,8 @@ CMakeFiles/INS_WIDGET_TEST.dir/mainwindow.cpp.s: cmake_force
 # Object files for target INS_WIDGET_TEST
 INS_WIDGET_TEST_OBJECTS = \
 "CMakeFiles/INS_WIDGET_TEST.dir/INS_WIDGET_TEST_autogen/mocs_compilation.cpp.o" \
+"CMakeFiles/INS_WIDGET_TEST.dir/collapsible_widget.cpp.o" \
+"CMakeFiles/INS_WIDGET_TEST.dir/histogram_widget.cpp.o" \
 "CMakeFiles/INS_WIDGET_TEST.dir/ins_image_graph_item.cpp.o" \
 "CMakeFiles/INS_WIDGET_TEST.dir/ins_image_graphics_view.cpp.o" \
 "CMakeFiles/INS_WIDGET_TEST.dir/ins_image_widget.cpp.o" \
@@ -148,6 +176,8 @@ INS_WIDGET_TEST_OBJECTS = \
 INS_WIDGET_TEST_EXTERNAL_OBJECTS =
 
 INS_WIDGET_TEST: CMakeFiles/INS_WIDGET_TEST.dir/INS_WIDGET_TEST_autogen/mocs_compilation.cpp.o
+INS_WIDGET_TEST: CMakeFiles/INS_WIDGET_TEST.dir/collapsible_widget.cpp.o
+INS_WIDGET_TEST: CMakeFiles/INS_WIDGET_TEST.dir/histogram_widget.cpp.o
 INS_WIDGET_TEST: CMakeFiles/INS_WIDGET_TEST.dir/ins_image_graph_item.cpp.o
 INS_WIDGET_TEST: CMakeFiles/INS_WIDGET_TEST.dir/ins_image_graphics_view.cpp.o
 INS_WIDGET_TEST: CMakeFiles/INS_WIDGET_TEST.dir/ins_image_widget.cpp.o
@@ -160,7 +190,7 @@ INS_WIDGET_TEST: /opt/Qt-5.15.2/5.15.2/gcc_64/lib/libQt5Widgets.so.5.15.2
 INS_WIDGET_TEST: /opt/Qt-5.15.2/5.15.2/gcc_64/lib/libQt5Gui.so.5.15.2
 INS_WIDGET_TEST: /opt/Qt-5.15.2/5.15.2/gcc_64/lib/libQt5Core.so.5.15.2
 INS_WIDGET_TEST: CMakeFiles/INS_WIDGET_TEST.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/insnex/10T/code/ins_widget/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable INS_WIDGET_TEST"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/insnex/10T/code/ins_widget/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable INS_WIDGET_TEST"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/INS_WIDGET_TEST.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

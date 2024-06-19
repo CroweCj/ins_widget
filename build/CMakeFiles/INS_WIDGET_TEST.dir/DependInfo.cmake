@@ -5,6 +5,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/insnex/10T/code/ins_widget/build/INS_WIDGET_TEST_autogen/mocs_compilation.cpp" "/home/insnex/10T/code/ins_widget/build/CMakeFiles/INS_WIDGET_TEST.dir/INS_WIDGET_TEST_autogen/mocs_compilation.cpp.o"
+  "/home/insnex/10T/code/ins_widget/collapsible_widget.cpp" "/home/insnex/10T/code/ins_widget/build/CMakeFiles/INS_WIDGET_TEST.dir/collapsible_widget.cpp.o"
+  "/home/insnex/10T/code/ins_widget/histogram_widget.cpp" "/home/insnex/10T/code/ins_widget/build/CMakeFiles/INS_WIDGET_TEST.dir/histogram_widget.cpp.o"
   "/home/insnex/10T/code/ins_widget/ins_image_graph_item.cpp" "/home/insnex/10T/code/ins_widget/build/CMakeFiles/INS_WIDGET_TEST.dir/ins_image_graph_item.cpp.o"
   "/home/insnex/10T/code/ins_widget/ins_image_graphics_view.cpp" "/home/insnex/10T/code/ins_widget/build/CMakeFiles/INS_WIDGET_TEST.dir/ins_image_graphics_view.cpp.o"
   "/home/insnex/10T/code/ins_widget/ins_image_widget.cpp" "/home/insnex/10T/code/ins_widget/build/CMakeFiles/INS_WIDGET_TEST.dir/ins_image_widget.cpp.o"

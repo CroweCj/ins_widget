@@ -7,8 +7,7 @@
 
 class InsImageGraphicsItem;
 class InsImageGraphicsView;
-class CollapsibleWidget;
-
+class HistogramCollapsibleWidget;
 class ImageViewWidget : public QWidget
 {
 	Q_OBJECT
@@ -29,5 +28,5 @@ private:
 	InsImageGraphicsView* mpGraphicsView;
 	QGraphicsScene* mpGraphicsScene;
 	InsImageGraphicsItem* mpImageItem;
-	CollapsibleWidget* mpHistWidget;
+	HistogramCollapsibleWidget* mpHistWidget;
 };
