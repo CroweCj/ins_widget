@@ -20,6 +20,7 @@ CMakeFiles/INS_WIDGET_TEST.dir/INS_WIDGET_TEST_autogen/mocs_compilation.cpp.o: /
 CMakeFiles/INS_WIDGET_TEST.dir/INS_WIDGET_TEST_autogen/mocs_compilation.cpp.o: /opt/Qt-5.15.2/5.15.2/gcc_64/include/QtCore/QObject
 CMakeFiles/INS_WIDGET_TEST.dir/INS_WIDGET_TEST_autogen/mocs_compilation.cpp.o: /opt/Qt-5.15.2/5.15.2/gcc_64/include/QtCore/QString
 CMakeFiles/INS_WIDGET_TEST.dir/INS_WIDGET_TEST_autogen/mocs_compilation.cpp.o: /opt/Qt-5.15.2/5.15.2/gcc_64/include/QtCore/QStringList
+CMakeFiles/INS_WIDGET_TEST.dir/INS_WIDGET_TEST_autogen/mocs_compilation.cpp.o: /opt/Qt-5.15.2/5.15.2/gcc_64/include/QtCore/QVector
 CMakeFiles/INS_WIDGET_TEST.dir/INS_WIDGET_TEST_autogen/mocs_compilation.cpp.o: /opt/Qt-5.15.2/5.15.2/gcc_64/include/QtCore/qalgorithms.h
 CMakeFiles/INS_WIDGET_TEST.dir/INS_WIDGET_TEST_autogen/mocs_compilation.cpp.o: /opt/Qt-5.15.2/5.15.2/gcc_64/include/QtCore/qarraydata.h
 CMakeFiles/INS_WIDGET_TEST.dir/INS_WIDGET_TEST_autogen/mocs_compilation.cpp.o: /opt/Qt-5.15.2/5.15.2/gcc_64/include/QtCore/qatomic.h
@@ -159,6 +160,7 @@ CMakeFiles/INS_WIDGET_TEST.dir/collapsible_widget.cpp.o: /opt/Qt-5.15.2/5.15.2/g
 CMakeFiles/INS_WIDGET_TEST.dir/collapsible_widget.cpp.o: /opt/Qt-5.15.2/5.15.2/gcc_64/include/QtCore/QMap
 CMakeFiles/INS_WIDGET_TEST.dir/collapsible_widget.cpp.o: /opt/Qt-5.15.2/5.15.2/gcc_64/include/QtCore/QString
 CMakeFiles/INS_WIDGET_TEST.dir/collapsible_widget.cpp.o: /opt/Qt-5.15.2/5.15.2/gcc_64/include/QtCore/QStringList
+CMakeFiles/INS_WIDGET_TEST.dir/collapsible_widget.cpp.o: /opt/Qt-5.15.2/5.15.2/gcc_64/include/QtCore/QVector
 CMakeFiles/INS_WIDGET_TEST.dir/collapsible_widget.cpp.o: /opt/Qt-5.15.2/5.15.2/gcc_64/include/QtCore/qalgorithms.h
 CMakeFiles/INS_WIDGET_TEST.dir/collapsible_widget.cpp.o: /opt/Qt-5.15.2/5.15.2/gcc_64/include/QtCore/qarraydata.h
 CMakeFiles/INS_WIDGET_TEST.dir/collapsible_widget.cpp.o: /opt/Qt-5.15.2/5.15.2/gcc_64/include/QtCore/qatomic.h
@@ -284,6 +286,7 @@ CMakeFiles/INS_WIDGET_TEST.dir/histogram_widget.cpp.o: /opt/Qt-5.15.2/5.15.2/gcc
 CMakeFiles/INS_WIDGET_TEST.dir/histogram_widget.cpp.o: /opt/Qt-5.15.2/5.15.2/gcc_64/include/QtCore/QMap
 CMakeFiles/INS_WIDGET_TEST.dir/histogram_widget.cpp.o: /opt/Qt-5.15.2/5.15.2/gcc_64/include/QtCore/QString
 CMakeFiles/INS_WIDGET_TEST.dir/histogram_widget.cpp.o: /opt/Qt-5.15.2/5.15.2/gcc_64/include/QtCore/QStringList
+CMakeFiles/INS_WIDGET_TEST.dir/histogram_widget.cpp.o: /opt/Qt-5.15.2/5.15.2/gcc_64/include/QtCore/QVector
 CMakeFiles/INS_WIDGET_TEST.dir/histogram_widget.cpp.o: /opt/Qt-5.15.2/5.15.2/gcc_64/include/QtCore/qalgorithms.h
 CMakeFiles/INS_WIDGET_TEST.dir/histogram_widget.cpp.o: /opt/Qt-5.15.2/5.15.2/gcc_64/include/QtCore/qarraydata.h
 CMakeFiles/INS_WIDGET_TEST.dir/histogram_widget.cpp.o: /opt/Qt-5.15.2/5.15.2/gcc_64/include/QtCore/qatomic.h
@@ -651,6 +654,7 @@ CMakeFiles/INS_WIDGET_TEST.dir/ins_image_widget.cpp.o: /opt/Qt-5.15.2/5.15.2/gcc
 CMakeFiles/INS_WIDGET_TEST.dir/ins_image_widget.cpp.o: /opt/Qt-5.15.2/5.15.2/gcc_64/include/QtCore/QObject
 CMakeFiles/INS_WIDGET_TEST.dir/ins_image_widget.cpp.o: /opt/Qt-5.15.2/5.15.2/gcc_64/include/QtCore/QString
 CMakeFiles/INS_WIDGET_TEST.dir/ins_image_widget.cpp.o: /opt/Qt-5.15.2/5.15.2/gcc_64/include/QtCore/QStringList
+CMakeFiles/INS_WIDGET_TEST.dir/ins_image_widget.cpp.o: /opt/Qt-5.15.2/5.15.2/gcc_64/include/QtCore/QVector
 CMakeFiles/INS_WIDGET_TEST.dir/ins_image_widget.cpp.o: /opt/Qt-5.15.2/5.15.2/gcc_64/include/QtCore/qalgorithms.h
 CMakeFiles/INS_WIDGET_TEST.dir/ins_image_widget.cpp.o: /opt/Qt-5.15.2/5.15.2/gcc_64/include/QtCore/qarraydata.h
 CMakeFiles/INS_WIDGET_TEST.dir/ins_image_widget.cpp.o: /opt/Qt-5.15.2/5.15.2/gcc_64/include/QtCore/qatomic.h

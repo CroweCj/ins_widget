@@ -52,7 +52,7 @@ ImageViewWidget::~ImageViewWidget()
 void ImageViewWidget::setImage(const QImage& _image)
 {
 	mpImageItem->update_image(_image);
-	
+	mpHistWidget->set_image(_image);
 }
 
 void ImageViewWidget::paintEvent(QPaintEvent* _event)

@@ -12,6 +12,8 @@ public:
 	virtual ~CollapsibleWidget();
 
 	void set_content_widget(QWidget* _content);
+
+	virtual void set_image(const QImage& _image);
 protected:
 	void slot_collaps_widget();
 protected:
@@ -27,6 +29,8 @@ class HistogramCollapsibleWidget : public CollapsibleWidget
 public:
 	HistogramCollapsibleWidget(QWidget* _parent = nullptr);
 	virtual ~HistogramCollapsibleWidget();
+
+	void set_image(const QImage& _image) override;
 private:
 	HistogramWidget* mpHistogramWidget;
 };

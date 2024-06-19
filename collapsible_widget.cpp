@@ -34,6 +34,11 @@ void CollapsibleWidget::set_content_widget(QWidget* _content)
 	mpContentWidget = _content;
 }
 
+void CollapsibleWidget::set_image(const QImage& _image)
+{
+	//TODO:
+}
+
 void CollapsibleWidget::slot_collaps_widget()
 {
 	if (mpContentWidget->isVisible())
@@ -59,5 +64,10 @@ HistogramCollapsibleWidget::HistogramCollapsibleWidget(QWidget* _parent)
 
 HistogramCollapsibleWidget::~HistogramCollapsibleWidget()
 {
+}
+
+void HistogramCollapsibleWidget::set_image(const QImage& _image)
+{
+	mpHistogramWidget->setImage(_image);
 }
 

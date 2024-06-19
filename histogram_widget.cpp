@@ -2,156 +2,154 @@
 #include <QPainter>
 #include <QDebug>
 
+#include <thread>
+#include <cmath>
+
 HistogramWidget::HistogramWidget(QWidget * parent  ):
     QWidget(parent)
+    , mMaxValue(0)
 {
-    m_font.setFamily("Ubuntu");
-    m_font.setPointSize(8);
-    m_font.setLetterSpacing(QFont::AbsoluteSpacing, 2);
     this->setFixedSize(QSize(400, 300));
-}
-void HistogramWidget::OninitData(const QMap<QString, QStringList> & m_dataMap)
-{
-    this->m_dataMap = m_dataMap;
-}
-
-void HistogramWidget::SetTitle( QString  title)
-{
-    this->m_title = title;
-}
-void HistogramWidget::SetHoriTitle( QString horiTitle)
-{
-    this->m_horiTitle = horiTitle;
-}
-void HistogramWidget::SetVeriTitle( QString veriTitle)
-{
-    this->m_veriTitle = veriTitle;
-}
-void HistogramWidget::SetDataColorList(const QList<QColor> &m_colorList)
-{
-    this->m_colorList = m_colorList;
-}
-void HistogramWidget::SetVeriColor( QColor m_veriColor)
-{
-    this->m_veriColor = m_veriColor;
-}
-void HistogramWidget::SetHoriColor( QColor m_horiColor)
-{
-    this->m_horiColor = m_horiColor;
-}
-void HistogramWidget::SetVeriColumnarInterval(const int m_space)
-{
-    this->m_space = m_space;
-}
-void HistogramWidget::SetVerticalScale(const int m_verticalScale,  int m_verticalStartScale )
-{
-    this->m_verticalScale = m_verticalScale;
-    this->m_verticalStartScale = m_verticalStartScale;
-}
-void HistogramWidget::SetVerticalScaleToPixel( int m_verticalToPixel)
-{
-    this->m_verticalToPixel = m_verticalToPixel;
-}
-void HistogramWidget::SetHoricalWidth(const int m_columnarWidth)
-{
-    this->m_columnarWidth = m_columnarWidth;
+    mRedHistogram.resize(256);
+    mGreenHistogram.resize(256);
+    mBlueHistogram.resize(256);
 }
 
-void HistogramWidget::SetChartMargin(const int m_margin )
+HistogramWidget::~HistogramWidget()
 {
-    this->m_margin = m_margin;
 }
-void HistogramWidget::SetCoordinateFont(const QFont &m_font)
+
+void HistogramWidget::setImage(const QImage& _image)
 {
-    this->m_font = m_font;
+    std::thread calcThread(&HistogramWidget::calcHistogram, this, _image);
+    calcThread.detach();
 }
-void HistogramWidget::SetHorizonScaleValue(const QStringList &m_horizonlist)
+
+void HistogramWidget::setHistogram(const std::vector<double>& _redHistogram,
+                        const std::vector<double>& _greenHistogram,
+                        const std::vector<double>& _blueHistogram)
 {
-    this->m_horizonlist = m_horizonlist;
+    mRedHistogram = _redHistogram;
+    mGreenHistogram = _greenHistogram;
+    mBlueHistogram = _blueHistogram;
+    update();
 }
+
 void HistogramWidget::paintEvent(QPaintEvent *event)
 {
-    QPainter paint(this);
-    //绘制坐标系
-    int temp = m_margin;
-    if(temp >= 200)
-        temp = 50;
-    //横坐标--坐标轴
-    paint.setPen(m_veriColor);
-    paint.drawLine(QPoint(m_margin, this->height() - m_margin), QPoint(this->width() - m_margin, this->height() - m_margin));
-    paint.drawLine(QPoint(this->width() - m_margin, this->height() - m_margin), QPoint(this->width() - m_margin - temp * 0.5, this->height() - 50 - temp * 0.2));
-    paint.drawLine(QPoint(this->width() - m_margin, this->height() - m_margin), QPoint(this->width() - m_margin - temp * 0.5, this->height() - 50 + temp * 0.2));
-    //纵坐标--坐标轴
-    paint.setPen(m_horiColor);
-    paint.drawLine(QPoint(m_margin, this->height() - m_margin), QPoint(m_margin, m_margin));
-    paint.drawLine(QPoint(m_margin, m_margin), QPoint(m_margin - temp * 0.2, m_margin + temp * 0.5));
-    paint.drawLine(QPoint(m_margin, m_margin), QPoint(m_margin + temp * 0.2, m_margin + temp * 0.5));
+    Q_UNUSED(event);
 
-    //绘制刻度值
-    paint.setFont(m_font);
-    //横坐标
-    for(int i = 0; i < m_horizonlist.size(); i++)
-    {
-        if(m_margin + i * (m_columnarWidth + m_space) > this->width() - m_margin - temp * 0.5 - m_margin)
-            break;
-        paint.drawText(QRectF(QPoint(m_margin + i * (m_columnarWidth + m_space), this->height() - m_margin), \
-                              QPoint(m_margin + i * (m_columnarWidth + m_space) + m_columnarWidth, this->height() )), \
-                       Qt::AlignHCenter, m_horizonlist.at(i));
+    QPainter painter(this);
+
+    // 设置背景色为白色
+    painter.fillRect(rect(), Qt::white);
+
+    // 设置直方图的参数
+    int histogramWidth = width(); // 将控件宽度分成三个部分，每个通道一个部分
+    int histogramHeight = height() - 20; // 留出一些空间用于标题等
+    // 绘制红色通道直方图
+    drawHistogram(painter, mRedHistogram, histogramWidth, histogramHeight, Qt::red, "Red", 0);
+
+    // 绘制绿色通道直方图
+    drawHistogram(painter, mGreenHistogram, histogramWidth, histogramHeight, Qt::green, "Green", 0);
+
+    // 绘制蓝色通道直方图
+    drawHistogram(painter, mBlueHistogram, histogramWidth, histogramHeight, Qt::blue, "Blue", 0);
+}
+
+void HistogramWidget::drawHistogram(QPainter &painter,
+                       const std::vector<double> &histogram,
+                       int width, 
+                       int height, 
+                       const QColor &color, 
+                       const QString &title, 
+                       int xOffset)
+{
+    // 设置画笔颜色
+    painter.setPen(color);
+
+    // 绘制标题
+    painter.drawText(xOffset, 15, title);
+
+    // 绘制直方图
+    for (int i = 0; i < 256; ++i) {
+        int x = xOffset + i * (width / 256.0);
+        int y = histogram[i] * height;
+        painter.drawLine(x, height, x, y);
     }
+}
 
-    //纵坐标
-    int height = this->height() - m_margin;
-    int i = 0;
+void HistogramWidget::calcHistogram(const QImage& image)
+{
+    mMaxValue = 0;
+    std::vector<int> redHistogram(256, 0);
+    std::vector<int> greenHistogram(256, 0);
+    std::vector<int> blueHistogram(256, 0);
+    for (int y = 0; y < image.height(); ++y) {
+        for (int x = 0; x < image.width(); ++x) {
+            QRgb pixel = image.pixel(x, y);
 
-    while(height > m_margin + temp * 0.5 + m_verticalScale)
-    {
-        paint.drawText(QRectF(QPoint(0, this->height() - m_margin - i * (m_verticalToPixel))\
-                              , QPoint(m_margin, this->height() - m_margin - i * (m_verticalToPixel) + m_verticalToPixel))
-                       , Qt::AlignHCenter, QString("%1").arg(m_verticalStartScale + i * m_verticalScale));
-        height -= m_verticalToPixel;
-        i++;
-    }
-
-    //绘制坐标表示
-    //横坐标
-    paint.drawText(QRectF(QPointF(this->width() - m_margin - temp * 0.5, this->height() - m_margin), \
-                          QPointF(this->width() - m_margin - temp * 0.5 - m_margin, this->height())), Qt::AlignHCenter, m_horiTitle);
-    //纵坐标
-    paint.drawText(QRectF(QPointF(m_margin, m_margin + temp * 0.5), QPointF(0, m_margin + temp * 0.5 + 100)),
-                   Qt::AlignHCenter, m_veriTitle);
-    //绘制标题
-    paint.drawText(QRectF(QPointF(0, 0), QPointF(this->width(), m_margin)),
-                   Qt::AlignHCenter | Qt::AlignVCenter, m_title);
-    qDebug() << m_horiTitle;
-    //绘制数值
-    int j = 0, num = 0;
-    for(auto iter = m_dataMap.begin(); iter != m_dataMap.end(); iter++, j++)
-    {
-        if(iter.value().size() == 1)
-        {
-            if(j >= m_colorList.size())
-                paint.setBrush(QColor(qrand() % 255, qrand() % 255, qrand() % 255));
-            else
-                paint.setBrush(m_colorList.at(j));
-        }
-        num = 0;
-        for(int i = 0; i < iter.value().size(); i++)
-        {
-            if(m_margin + j * (m_space + m_columnarWidth) > this->width() - m_margin - m_margin - 0.5 * temp)
-                break;
-            if(iter.value().size() > 1)
-            {
-                if(i >= m_colorList.size())
-                {
-                    paint.setBrush(QColor(qrand() % 255, qrand() % 255, qrand() % 255));
-                }
-                else
-                    paint.setBrush(m_colorList.at(i));
+            // 分别获取红、绿、蓝通道的像素值
+            int red = qRed(pixel);
+            int green = qGreen(pixel);
+            int blue = qBlue(pixel);
+            if(red > mMaxValue){
+                mMaxValue = red;
             }
 
-            paint.drawRect(m_margin + j * (m_space + m_columnarWidth), this->height() - m_margin - num\
-                           , m_columnarWidth, 0 - iter.value().at(i).toInt());
-            num += iter.value().at(i).toInt();
+            if(green > mMaxValue){
+                mMaxValue = green;
+            }
+            if(blue > mMaxValue){
+                mMaxValue = blue;
+            }
+            // 累加各通道的像素数量
+            redHistogram[red]++;
+            greenHistogram[green]++;
+            blueHistogram[blue]++;
+        }
+    }
+
+    normalizedHist(redHistogram, mRedHistogram);
+    normalizedHist(greenHistogram, mGreenHistogram);
+    normalizedHist(blueHistogram, mBlueHistogram);
+
+    update();
+}
+
+void HistogramWidget::normalizedHist(const std::vector<int> &histogram, std::vector<double> &normalizedHist)
+{
+    // 计算直方图数据的均值和方差
+    // double mean = 0.0;
+    // for (int i = 0; i < 256; ++i) {
+    //     mean += histogram[i];
+    // }
+    // mean /= 256.0;
+
+    // double variance = 0.0;
+    // for (int i = 0; i < 256; ++i) {
+    //     variance += (histogram[i] - mean) * (histogram[i] - mean);
+    // }
+    // variance /= 256.0;
+
+    // // 标准化直方图数据
+    // if (variance > 0.0) {
+    //     double stdDeviation = sqrt(variance);
+    //     for (int i = 0; i < 256; ++i) {
+    //         normalizedHist[i] = (histogram[i] - mean) / stdDeviation;
+    //     }
+    // }
+
+    int maxVal = *std::max_element(histogram.begin(), histogram.end());
+    int minVal = *std::min_element(histogram.begin(), histogram.end());
+
+    // 将直方图数据映射到 [0, 1] 范围
+    if (maxVal != minVal) {
+        for (int i = 0; i < 256; ++i) {
+            normalizedHist[i] = static_cast<double>(histogram[i] - minVal) / (maxVal - minVal);
         }
     }
 }
+
+
+
