@@ -100,7 +100,8 @@
         "qgraphicsscenewheelevent": "cpp",
         "qgraphicsscene": "cpp",
         "qgraphicsproxywidget": "cpp",
-        "qpushbutton": "cpp"
+        "qpushbutton": "cpp",
+        "qgridlayout": "cpp"
     },
     "cmake.configureOnOpen": false
 }
